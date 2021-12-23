@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:wght@100;300;400;700;900&display=swap');
+
+* {
+    
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+}
+/* NAV SECTION */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #d7d0d0;
+    padding: 1rem 7.5rem;
+    box-shadow: 0 .5rem .5rem rgba(0, 0, 0, .4);
+}
+a {
+    text-decoration: none;
+}
+.nav__logo--container {
+    display: flex;
+    align-items: center;
+    font-size: 3.5rem;
+    color: #171717;
+    font-family: 'Bebas Neue', cursive;
+}
+.fas{
+    margin-right: 1rem;
+}
+.arrow {
+    color: green;
+    font-size: 3rem;
+}
+/* HOME SECTION */
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(to bottom, 
+    rgba(245, 238, 238, 0.5), 
+    rgba(245, 238, 238, 0.5)),
+    url('./images/food-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    height: 100vh;
+    z-index: 10;
+}
+.home h1 {
+padding-top: 15rem;
+margin-bottom: 5rem;
+font-size: 7.5rem;
+color: #171717;
+font-family: 'Bebas Neue', cursive;
+}
+.home h1 > span {
+    color: green;
+    font-size: 7.5rem;
+    transform: rotate(-45deg);
+}
+.home__content--container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5rem;
+    max-width: 90%;
+    background-color: rgba(245, 238, 238, .5);
+}
+.home__content--text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 2.5rem;
+    font-weight: 300;
+    font-family: 'Lato', sans-serif;
+    font-size: 4.5rem;
+}
+.home__content--text p {
+    width: 80%;
+    animation: float 3s linear infinite;
+}
+@keyframes float{
+    0%, 100%{
+      transform: translateY(0rem);
+    }
+    50%{
+      transform: translateY(3rem);
+    }
+  }
+.btn {
+    text-decoration: none;
+    color: green;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    padding: 1rem 1.5rem;
+    border: 2px solid green;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background-color: green;
+    transition: .3s linear;
+    z-index: -1;
+}
+.btn:hover::before {
+    width: 100%;
+    left: 0;
+}
+.btn:hover {
+    color: #fff;
+}
+.home__content--img {
+    border-radius: .5rem;
+    width: 60%;
+}
+/* MENU OVERVIEW SECTION */
+.menu {
+    background-color: #f7f7f7;
+    text-align: center;
+}
+.menu h1{
+    padding-top: 7rem;
+    margin-bottom: 5rem;
+    font-size: 7.5rem;
+    color: #171717;
+    font-family: 'Bebas Neue', cursive;
+}
+.menu h1 > span {
+    color: green;
+    font-size: 7.5rem;
+    font-family: 'Bebas Neue', cursive;
+}
