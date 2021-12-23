@@ -278,6 +278,7 @@ font-family: 'Bebas Neue', cursive;
     font-size: 5rem;
     font-family: 'Bebas Neue', cursive;
     color: #2C2C2B;
+    border-bottom: .5rem solid green;
 }
 .gallery__card .gallery__slide h3 span {
     color: green;
