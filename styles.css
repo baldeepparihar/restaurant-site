@@ -354,8 +354,8 @@ font-family: 'Bebas Neue', cursive;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 30rem;
-    width: 30rem;
+    height: 27rem;
+    width: 35rem;
     margin: 1rem 2rem;
     background-color: #777777;
     border-radius: 1rem;
@@ -392,3 +392,121 @@ font-family: 'Bebas Neue', cursive;
     font-family: 'Lato', sans-serif;
     color: #fff;
 }
+/* CONTACT */
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #777777;
+    text-align: center;
+    padding: 10rem 5rem;
+}
+.contact h1{
+    font-size: 7.5rem;
+    color: #2C2C2B;
+    font-family: 'Bebas Neue', cursive;
+    margin-bottom: 10rem;
+}
+.contact h1 > span {
+    color: green;
+    font-size: 7.5rem;
+    font-family: 'Bebas Neue', cursive;
+}
+.contact--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+    border-radius: .5rem;
+    width: 80%;
+    padding: 2rem;
+}
+.contact--container img {
+    width: 44%;
+    border-radius: .5rem;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem;
+    
+}
+form h3 {
+    font-size: 4.5rem;
+    color: #2C2C2B;
+    font-family: 'Bebas Neue', cursive;
+    margin-bottom: 1rem;
+}
+.contact h3 > span {
+    color: green;
+    font-size: 4.5rem;
+    font-family: 'Bebas Neue', cursive;
+}
+form .input--container {
+    display: flex;
+    margin: 1rem;
+}
+form input {
+    width: 35rem;
+    height: 5rem;
+    border-radius: .5rem;
+    margin: .5rem;
+    outline: none;
+    border: 1px solid #777777;
+    font-weight: 400;
+    font-size: 1.5rem;
+    font-family: 'Lato', sans-serif;
+    padding: 1rem;
+}
+form input::placeholder {
+    font-weight: 400;
+    font-size: 1.5rem;
+    font-family: 'Lato', sans-serif;
+}
+form input:focus {
+    padding-left: 1rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+    font-family: 'Lato', sans-serif;
+    border-color: green;
+}
+form input:focus::placeholder {
+    color: transparent;
+}
+form textarea {
+    width: 96%;
+    height: 15rem;
+    outline: none;
+    border: 1px solid #777777;
+    border-radius: .5rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+    font-family: 'Lato', sans-serif;
+    padding: 1rem;
+}
+form textarea::placeholder {
+    font-weight: 400;
+    font-size: 1.5rem;
+    font-family: 'Lato', sans-serif;
+}
+form textarea:focus {
+    padding-left: 1rem;
+    font-weight: 400;
+    font-size: 1.5rem;
+    font-family: 'Lato', sans-serif;
+    border-color: green;
+}
+form textarea:focus::placeholder {
+    color: transparent;
+}
+form .contact-btn {
+    width: 96%;
+    text-transform: uppercase;
+}
+form .contact-btn:hover {
+    background-color: green;
+}
+
+
