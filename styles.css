@@ -143,7 +143,7 @@ font-family: 'Bebas Neue', cursive;
     align-items: center;
     background-color: #f7f7f7;
     text-align: center;
-    padding: 10rem 5rem;
+    padding: 15rem 5rem;
 }
 .menu h1{
     margin-bottom: 5rem;
@@ -162,7 +162,7 @@ font-family: 'Bebas Neue', cursive;
     align-items: center;
     width: 90%;
 }
-.card {
+.menu__card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -178,38 +178,138 @@ font-family: 'Bebas Neue', cursive;
     position: relative;
     overflow: hidden;
 }
-.content {
+.menu__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
     font-weight: 400;
     font-family: 'Lato', sans-serif;
     font-size: 3.5rem;
     color: #2C2C2B;
     padding: 3rem 2rem;
 }
-.content > i {
+.menu__content > i {
     color: green;
     margin-bottom: -3.5rem;
 }
-.content > h3 {
+.menu__content > h3 {
     color: green;
     font-family: 'Bebas Neue', cursive;
 }
-.content > p {
+.menu__content > p {
     color: #2C2C2B;
 }
-.slide {
+.menu__slide {
     width: 100%;
     height: 100%;
     object-fit: cover;
     position: absolute;
     top: -100%;
     left: 0;
+    transition: ease-in-out .3s;
 }
-.menu .card--container .card:hover img {
+.menu .card--container .menu__card:hover .menu__slide {
     top: 0;
     transition: ease-in-out .3s;
 }
-.menu .card--container .card:hover .content {
+.menu .card--container .menu__card:hover .content {
     transform: translateY(110%);
     transition: ease-in-out .3s;
 }
-
+/* GALLERY */
+.gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(to bottom, 
+    rgba(245, 238, 238, 0.5), 
+    rgba(245, 238, 238, 0.5)),
+    url('./images/food-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    height: fit-content;
+    padding: 5rem 5rem;
+}
+.gallery h1{
+    margin: 5rem;
+    font-size: 7.5rem;
+    color: #2C2C2B;
+    font-family: 'Bebas Neue', cursive;
+}
+.gallery h1 > span {
+    color: green;
+    font-size: 7.5rem;
+    font-family: 'Bebas Neue', cursive;
+}
+.gallery__card--container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    background-color: rgba(245, 238, 238, .5);
+}
+.gallery__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 35rem;
+    width: 35rem;
+    margin: 1rem 2rem;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 8px 8px 10px 1px rgba(0,0,0,0.63);
+    -webkit-box-shadow: 8px 8px 10px 1px rgba(0,0,0,0.63);
+    -moz-box-shadow: 8px 8px 10px 1px rgba(0,0,0,0.63);
+    position: relative;
+    overflow: hidden;
+}
+.gallery__card .gallery__content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+}
+.gallery__card .gallery__slide h3 {
+    font-size: 5rem;
+    font-family: 'Bebas Neue', cursive;
+    color: #2C2C2B;
+}
+.gallery__card .gallery__slide h3 span {
+    color: green;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 5rem;
+}
+.gallery__card .gallery__slide p {
+    color: #2C2C2B;
+}
+.gallery__slide {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    font-size: 3.5rem;
+    color: #2C2C2B;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: ease-in-out .3s;
+    padding: 3rem 2rem;
+}
+.gallery .gallery__card--container .gallery__card:hover .gallery__slide {
+    top: 0;
+    transition: ease-in-out .3s;
+}
+.gallery .gallery__card--container .gallery__card:hover .gallery__content {
+    transform: translateY(100%);
+    transition: ease-in-out .3s;
+}
