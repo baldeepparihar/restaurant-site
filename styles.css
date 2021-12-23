@@ -29,9 +29,9 @@ a {
 .nav__logo--container {
     display: flex;
     align-items: center;
+    font-family: 'Bebas Neue', cursive;
     font-size: 3.5rem;
     color: #2C2C2B;
-    font-family: 'Bebas Neue', cursive;
 }
 .fas{
     margin-right: 1rem;
@@ -39,6 +39,17 @@ a {
 .arrow {
     color: green;
     font-size: 3rem;
+}
+.nav__item {
+    text-decoration: none;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2.5rem;
+    color: #2C2C2B;
+    margin-right: 1.5rem;
+}
+.nav__item:hover {
+    border-bottom: 3px solid green;
+    transition: ease-in-out .3s linear;
 }
 /* HOME SECTION */
 .home {
@@ -313,4 +324,71 @@ font-family: 'Bebas Neue', cursive;
 .gallery .gallery__card--container .gallery__card:hover .gallery__content {
     transform: translateY(100%);
     transition: ease-in-out .3s;
+}
+/* REVIEW */
+.reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7f7f7;
+    text-align: center;
+    padding: 15rem 5rem;
+}
+.reviews h1{
+    font-size: 7.5rem;
+    color: #2C2C2B;
+    font-family: 'Bebas Neue', cursive;
+    margin-bottom: 10rem;
+}
+.reviews h1 > span {
+    color: green;
+    font-size: 7.5rem;
+    font-family: 'Bebas Neue', cursive;
+}
+.reviews__card--container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.reviews__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 30rem;
+    width: 30rem;
+    margin: 1rem 2rem;
+    background-color: #777777;
+    border-radius: 1rem;
+    border: 1rem solid #fff;
+    box-shadow: 8px 8px 10px 1px rgba(0,0,0,0.63);
+    -webkit-box-shadow: 8px 8px 10px 1px rgba(0,0,0,0.63);
+    -moz-box-shadow: 8px 8px 10px 1px rgba(0,0,0,0.63);
+    position: relative;
+    padding: 2rem;
+}
+.reviews__card img {
+    height: 14rem;
+    width: 14rem;
+    border-radius: 50%;
+    border: 1rem solid #fff;
+    margin-top: -10rem;
+    object-fit: cover;
+    box-shadow: 8px 8px 10px 1px rgba(0,0,0,0.63);
+    -webkit-box-shadow: 8px 8px 10px 1px rgba(0,0,0,0.63);
+    -moz-box-shadow: 8px 8px 10px 1px rgba(0,0,0,0.63);
+}
+.reviews__card h3 {
+    font-size: 3rem;
+    font-family: 'Bebas Neue', cursive;
+    color: #fff;
+}
+.reviews__card i {
+    color: #FFD700;
+    font-size: 2rem;
+}
+.reviews__card p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    color: #fff;
 }
