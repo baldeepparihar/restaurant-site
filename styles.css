@@ -33,7 +33,7 @@ a {
     font-size: 3.5rem;
     color: #2C2C2B;
 }
-.fas{
+header i{
     margin-right: 1rem;
 }
 .arrow {
@@ -508,5 +508,56 @@ form .contact-btn {
 form .contact-btn:hover {
     background-color: green;
 }
-
+/* FOOTER */
+footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3rem 20rem;
+    background-color: #d7d0d0;
+}
+.footer__logo--container {
+    display: flex;
+    align-items: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3.5rem;
+    color: #2C2C2B;
+}
+.footer__social--container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer i{
+    margin-right: 1rem;
+}
+footer .fab {
+    font-size: 4rem;
+    color: #2C2C2B;
+}
+.footer-arrow {
+    color: green;
+    font-size: 3rem;
+}
+footer p {
+    font-weight: 400;
+    font-size: 2rem;
+    font-family: 'Lato', sans-serif;
+}
+/* SCROLL TO TOP */
+#scroll-top {
+    position: fixed;
+    top: -120%;
+    right: 4rem;
+    padding: .5rem 1.5rem;
+    font-size: 4rem;
+    background-color: green;
+    color: #fff;
+    border-radius: .5rem;
+    transition: 1s linear;
+    z-index: 1000;
+}
+#scroll-top.active {
+    top:calc(100% - 18rem)
+}
 
