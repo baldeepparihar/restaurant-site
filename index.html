@@ -12,12 +12,15 @@
 </head>
 <header>
     <a class="nav__logo--container" href="#"><i class="fas fa-utensils"></i>Eat <span class="arrow">></span> Drink</a>
-    <div>
+
+    <div id="menu-bar" class="fas fa-bars"></div>
+
+    <nav class="navbar">
         <a class="nav__item nav__menu" href="#menu">Menu Overview</a>
         <a class="nav__item nav__gallery" href="#gallery">Gallery</a>
         <a class="nav__item nav__reviews" href="#reviews">Reviews</a>
         <a class="nav__item nav__contact" href="#contact">Contact</a>
-    </div>
+    </nav>
 </header>
 <body>
 <section id="home" class="home">
@@ -26,16 +29,11 @@
         <div class="home__content--text">
             <p>Spicy jalapeno bacon ipsum dolor amet kielbasa veniam pastrami adipisicing ham 
                 hock beef flank corned beef lorem sirloin. Adipisicing ex picanha deserunt rump 
-                t-bone hamburger spare ribs venison pariatur in drumstick. Qui in aliquip dolore 
-                duis. Burgdoggen aute fugiat jerky.</p>
+                t-bone hamburger spare ribs. Burgdoggen aute fugiat jerky.</p>
             <a href="#" class="btn">order now</a>
         </div>
         <img class="home__content--img" src="./images/burger-home.jpg" alt="">
     </div>
-    <!-- <img class="ketchup bottle" src="./images/ketchup.png" alt="">
-    <img class="bbq bottle" src="./images/bbq.png" alt="">
-    <img class="sketch1 sketch" src="./images/food-sketch1.jpg" alt="">
-    <img class="sketch2 sketch" src="./images/food-sketch2.jpg" alt=""> -->
 </section>
 <!-- MENU OVERVIEW -->
 <section id="menu" class="menu">
@@ -44,18 +42,22 @@
     <div class="menu__card">
         <img class="menu__slide" src="./images/burger-slide.jpg" alt="">
         <div class="menu__content">
-            <i class="fas fa-hamburger fa-2x"></i>
-            <h3>Burgers</h3>
+            <div class="menu__icon--container">
+                <i class="fas fa-hamburger"></i>
+                <h3>Burgers</h3>
+            </div>
             <p>Our burgers are capicola turducken corned beef frankfurter. 
                 Turducken sunt burgdoggen tongue, elit beef meatloaf 
-                adipisicing in in shankle esse.</p>
+                adipisicing in in shankle esse.</p>    
         </div>
     </div>
     <div class="menu__card">
         <img class="menu__slide" src="./images/pizza-slide.jpg" alt="">
         <div class="menu__content">
-            <i class="fas fa-pizza-slice fa-2x"></i>
-            <h3>Pizza</h3>
+            <div class="menu__icon--container">
+                <i class="fas fa-pizza-slice"></i>
+                <h3>Pizza</h3>
+            </div>
             <p>Our pizza is aute pastrami, duis pork loin andouille ball tip. 
                 Reprehenderit corned beef chicken, in dolor nostrud 
                 adipisicing pork loin ut aliquip.</p>
@@ -64,8 +66,10 @@
     <div class="menu__card">
         <img class="menu__slide" src="./images/desert-slide.jpg" alt="">
         <div class="menu__content">
-            <i class="fas fa-ice-cream fa-2x"></i>
-            <h3>Dessert</h3>
+            <div class="menu__icon--container">
+                <i class="fas fa-ice-cream"></i>
+                <h3>Dessert</h3>
+            </div>
             <p>Our selection of dessert cupcake powder chocolate bar 
                 liquorice danish croissant. Tart gummies liquorice carrot cake 
                 jelly danish cake. Lemon drops shortbread.</p>
@@ -74,8 +78,10 @@
     <div class="menu__card">
         <img class="menu__slide" src="./images/beer-slide.jpg" alt="">
         <div class="menu__content">
-            <i class="fas fa-beer fa-2x"></i>
-            <h3>Beer</h3>
+            <div class="menu__icon--container">
+                <i class="fas fa-beer"></i>
+                <h3>Beer</h3>
+            </div>
             <p>Our selection of beers a gravy like PBR organizes 
                 the Full Sail IPA defined by a micro brew, but they need 
                 to remember how intoxicatedly a Left Hand gets stinking 
@@ -279,7 +285,19 @@
 
 
     <script>
-        window.onscroll = () => {
+    let menu = document.querySelector('#menu-bar');
+    let navbar = document.querySelector('.navbar');
+
+    menu.onclick = () => {
+        menu.classList.toggle('fa-times');
+        navbar.classList.toggle('active');
+    }
+
+    window.onscroll = () => {
+    
+    menu.classList.remove('fa-times');
+    navbar.classList.remove('active');
+
     if(window.scrollY > 60) {
         document.querySelector('#scroll-top').classList.add('active');
     } else {
